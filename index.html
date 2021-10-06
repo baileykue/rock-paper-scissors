@@ -16,8 +16,27 @@
 </head>
 
 <body>
+    <h1>Rock Paper Scissors</h1>
+        <section>
+            <label for="">
+                <input type="radio" name="choice" value="paper">
+                <img src="./assets/paper.jpg">
+            </label>
+            <label for="">
+                <input type="radio" name="choice" value="rock">
+                <img src="./assets/rock.jpg">
+            </label>
+            <label for="">
+                <input type="radio" name="choice" value="scissors">
+                <img src="./assets/scissors.jpg">
+            </label>
+        </section>
+    <p id="error" class="hidden">You must choose!!</p>
+    <button id="throw">Throw</button>
+    <p id="result"></p>
+    <p>You have won: <span id="wins">0</span> times</p>
+    <p>You have lost: <span id="losses">0</span> times</p>
     
-
     <script type="module" src="./app.js"></script>
 </body>
 
