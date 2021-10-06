@@ -4,6 +4,7 @@ const throwButton = document.getElementById('throw');
 const winSpan = document.getElementById('wins');
 const lossSpan = document.getElementById('losses');
 const error = document.getElementById('error');
+const result = document.getElementById('result');
 
 let wins = 0;
 let losses = 0;
@@ -16,14 +17,21 @@ throwButton.addEventListener('click', ()=>{
   error.classList.add('hidden');
 
   const userThrow = selected.value;
-  const computerThrow = throws[Math.ceil(Math.random()*3)];
-
+  const computerThrow = ['rock', 'paper', 'scissors'] [Math.floor(Math.random()*3)];
+  const outcome = didUserWin(userThrow, computerThrow)
   
-  if (didUserWin(userThrow, computerThrow)) {
-    wins++
+console.log(computerThrow)
+
+  if (outcome === 1) {
+    result.textContent = 'You win!'
+    wins++;
+    winSpan.textContent = wins;
+  } else if (outcome === -1){
+    result.textContent = 'You Lose!'
+    losses++;
+    lossSpan.textContent = losses;
   } else {
-    losses++
+result.textContent = "It's a draw!"
   }
 
-  console.log(wins.value);
 })
