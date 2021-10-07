@@ -6,9 +6,12 @@ const lossSpan = document.getElementById('losses');
 const error = document.getElementById('error');
 const result = document.getElementById('result');
 const restartButton = document.getElementById('restart');
+const restartSpan = document.getElementById('restart-count');
+const restartText = document.getElementById('restart-text');
 
 let wins = 0;
 let losses = 0;
+let restarts = 0;
 
 throwButton.addEventListener('click', ()=>{
     const selected = document.querySelector('input[type=radio]:checked');
@@ -42,4 +45,7 @@ restartButton.addEventListener('click', ()=>{
     losses = 0;
     lossSpan.textContent = losses;
     restartButton.classList.add('hidden');
+    restartText.classList.remove('hidden');
+    restarts++;
+    restartSpan.textContent = restarts;
 });
