@@ -7,7 +7,7 @@ export function didUserWin(userChoice, actualChoice) {
         return 1;
     } else if (userChoice === 'paper' && actualChoice === 'rock'){
         return 1;
-    } else if (userChoice === 'scissors' && actualChoicen === 'paper'){
+    } else if (userChoice === 'scissors' && actualChoice === 'paper'){
         return 1;
     } else { return -1; }
 
