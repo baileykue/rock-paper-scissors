@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #F5D5ED;
 }
 
 @keyframes gradient {
@@ -23,9 +24,10 @@ body {
 }
 
 input[type=radio]:checked + img {
-    border: 5px solid black;
+    border: 5px dotted #F5D5ED;
     padding: 10px;
     width: 400px;
+    margin: 10px;
 }
 
 input[type=radio] {
@@ -40,4 +42,22 @@ img {
 
 .hidden {
     display: none;
+}
+
+button {
+    font-family: 'Bungee Shade', cursive;
+    border: 2px dotted #F5D5ED;
+    padding: 10px;
+    background-color: transparent;
+    color: #ce1980;
+}
+
+button:hover {
+    font-size: 1rem;
+    background-color: #ce1980; opacity: 0.4;
+    color: #F5D5ED;
+}
+
+p {
+    margin: 10px;
 }

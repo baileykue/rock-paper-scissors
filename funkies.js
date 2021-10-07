@@ -3,11 +3,11 @@
 export function didUserWin(userChoice, actualChoice) {
     if (userChoice === actualChoice) {
         return 0;
-    } else if (userChoice.value === 'rock' && actualChoice.value === 'scissors'){
+    } else if (userChoice === 'rock' && actualChoice === 'scissors'){
         return 1;
-    } else if (userChoice.value === 'paper' && actualChoice.value === 'rock'){
+    } else if (userChoice === 'paper' && actualChoice === 'rock'){
         return 1;
-    } else if (userChoice.value === 'scissors' && actualChoice.value === 'paper'){
+    } else if (userChoice === 'scissors' && actualChoicen === 'paper'){
         return 1;
     } else { return -1; }
 
