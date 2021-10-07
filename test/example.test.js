@@ -1,4 +1,4 @@
-IMPORT MODULES under test here:
+/*IMPORT MODULES under test here:
 import { didUserWin } from '../funkies';
 
 const test = QUnit.test;
@@ -15,4 +15,4 @@ test('user: rock, computer: paper', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(-1, -1);
-});
+});*/
