@@ -3,6 +3,7 @@ import { didUserWin } from './funkies.js';
 const throwButton = document.getElementById('throw');
 const winSpan = document.getElementById('wins');
 const lossSpan = document.getElementById('losses');
+const drawSpan = document.getElementById('draws');
 const error = document.getElementById('error');
 const result = document.getElementById('result');
 const restartButton = document.getElementById('restart');
@@ -11,6 +12,7 @@ const restartText = document.getElementById('restart-text');
 
 let wins = 0;
 let losses = 0;
+let draws = 0;
 let restarts = 0;
 
 throwButton.addEventListener('click', ()=>{
@@ -35,6 +37,8 @@ throwButton.addEventListener('click', ()=>{
         lossSpan.textContent = losses;
     } else {
         result.textContent = "It's a draw!";
+        draws++;
+        drawSpan.textContent = draws;
     }
 
 });
@@ -44,6 +48,8 @@ restartButton.addEventListener('click', ()=>{
     winSpan.textContent = wins;
     losses = 0;
     lossSpan.textContent = losses;
+    draws = 0;
+    drawSpan.textContent = draws;
     restartButton.classList.add('hidden');
     restartText.classList.remove('hidden');
     restarts++;
